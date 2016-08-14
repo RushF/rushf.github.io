@@ -1,0 +1,46 @@
+
+#niggafag {
+    background-color: red;
+}
+
+.container {
+    
+}
+
+.test1 {
+/*    color: white;*/
+    opacity: 50%;
+    background-color: rgba(0,255,0,0.3);
+}
+
+body {
+    background-color: #ff1a00 !important;
+    padding-top: 50px;
+}
+
+
+
+.homelogo {
+    background-image: url(logo.jpg);
+    background-size: contain;
+/*    height: auto;*/
+    width: 180px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.navbar {
+    
+}
+
+.container-fluid {
+    
+}
+
+
+
+.borderbox {
+   background-color: white;
+    border-radius: 5px;
+    border: 2px solid black;
+}
