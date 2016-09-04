@@ -1,46 +1,217 @@
 
-#niggafag {
-    background-color: red;
-}
-
-.container {
-    
-}
-
-.test1 {
-/*    color: white;*/
-    opacity: 50%;
-    background-color: rgba(0,255,0,0.3);
-}
-
 body {
-    background-color: #ff1a00 !important;
-    padding-top: 50px;
+     margin: 0;
+    padding: 0;
+    height: 100%;
 }
-
-
 
 .homelogo {
     background-image: url(logo.jpg);
     background-size: contain;
-/*    height: auto;*/
     width: 180px;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.navbar {
-    
-}
-
-.container-fluid {
-    
-}
-
-
-
 .borderbox {
-   background-color: white;
+    background-color: white;
     border-radius: 5px;
     border: 2px solid black;
+}
+
+html {
+    height: 100%;
+}
+
+#wrap > div {
+background: #eee;  
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+}
+
+
+.small {    
+    display: flex;
+    color: #eee;
+    align-content: center;
+    justify-content: center;
+   align-items: center;        
+}
+
+
+#bigl {
+    background: #dd0;
+}
+
+#bigr {
+    background: #0ff
+}
+.small  {
+    width: 100%;    
+    height: 100%;
+    text-decoration: none;
+}
+
+.small:hover{
+  color:#333333 !important;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    margin: auto;
+    width: 80%;
+    flex-direction: column;
+    height: 100%;
+    display: flex;
+}
+@media(max-width: 700px){
+    .content{
+        width: 100%;
+    }
+    #currentProject div{
+        margin: 0;
+    }
+}
+
+#currentProject {
+    flex-direction: column;
+    display: flex;   
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    height: 80%;
+    width: 100%;
+    background-color: #ff3;
+}
+
+
+#headimg {
+    position: absolute;
+/*    height: 300px;*/
+/*    width: 100%;*/
+/*   display: block;*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#productDescript {
+    width: 100%;    box-sizing: border-box;
+
+    height: 300px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #eee;
+    text-align: center;
+/*    box-shadow: 0px 0px 20px #333 ;*/
+}
+
+h2 {
+    font-family: serif !important;
+}
+
+#wrap {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+
+
+
+#img {
+width: 200px;
+/*    height:100%;*/
+    margin: auto;
+}
+
+#focusedimg {
+    background-image: url(./1.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #333;
+    height:100%;
+    width: 100%;
+}
+
+#mainpage {
+    background-image:url(./logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: #fe0000;
+}
+
+#llink:hover {
+       background: #ff0 !important ;
+}
+
+#rlink:hover {
+       background: #0ff !important;
+}
+
+
+
+#sides {
+        color: #eeeeee !important;
+    background-color: #333333;  
+    border-top: 5px black solid;
+    border-bottom: 5px black solid;
+    display:flex;height:25%;
+}
+
+#gallery {
+    width: 100%;
+    height: 20%;
+    background-color: #333;
+}
+
+#block {
+    flex: 0 0 auto;
+    height: 100%;
+    display: block;
+    background-color: #aaa;
+}
+
+#scroll {
+    height: 100%;
+/*    width: auto;*/
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+
+.block img {
+    margin: 0 auto;
+    border-style: solid;
+    border-color: #333;
+    border-width: 0 5px  0 5px  ;
+    display: block;
+    height: 100%;
+}
+
+.block {
+    flex: 0 0 auto;
+/*    float: left;*/
+display: block;
+    height: 100%;
+}
+
+.scroll {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+flex-wrap: nowrap;
+    overflow-x: auto;  
+    -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
