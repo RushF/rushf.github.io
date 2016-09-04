@@ -10,15 +10,41 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
     <script>
+        
+        function flip(){
+           switch (lastElement.selector){
+               case "#bigl":
+//                   alert("going to bigr");
+                   $('#flip').attr("href", "#bigr");
+                   break;
+               case "#bigr":
+//                   alert("going to bigl");
+                   $('#flip').attr("href","#bigl");
+                   break;
+           }
+        }
+        var lastElement;
         $(function () {
+            $(".nav").hide();
+            $('body').addClass('stop-scrolling')
+            $('body').bind('touchmove', function (e) {
+                e.preventDefault()
+            })
             $('a[href*="#"]:not([href="#"])').click(function () {
                 if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                     var target = $(this.hash);
                     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                     if (target.length) {
+                        if (target.selector == "#sides") {
+                            $('.nav').hide(500);
+                        } else {
+                            $('.nav').show(500);
+                        }
+                        console.log(target);
                         $('html, body').animate({
                             scrollTop: target.offset().top
                         }, 500);
+                        lastElement=target;
                         return false;
                     }
                 }
@@ -28,28 +54,42 @@
 </head>
 
 <body>
-    <div class="page" id="mainpage">
-        <div id="sides">
-            <a class="small" id="llink" href="#bigl">
-                <h1>
+    <a href="#sides">
+        <h2 class="nav back ">
+            BACK
+        </h2>
+    </a>
+    <a id="flip" onclick="javascript:flip()" href="#sides">
+        <h2 class="nav  flip ">
+            FLIP
+        </h2>
+    </a>
+    <a href="#sides">
+        <div class="page" id="mainpage">
+
+        </div>
+    </a>
+    <div class="page" id="sides">
+        <div class="half">
+        <a class="small" id="llink" href="#bigl">
+            <h1>
                SIDE A
             </h1>
-            </a>
-            <a class="small" id="rlink" href="#bigr">
-                <h1>SIDE B</h1>
-            </a>
+        </a>
+        <a class="small" id="rlink" href="#bigr">
+            <h1>SIDE B</h1>
+        </a>
         </div>
     </div>
-
     <div class="page" id="bigl">
         <div class="content">
             <div id="currentProject">
                 <div id="focusedimg">
                 </div>
                 <div id="productDescript">
-                    <h4>
+                    <h3>
                     TEST TEXT
-                    </h4>
+                    </h3>
                     <br/> This is the product description THIS IS AN AMAAZING PRODUCT BUY ME NOW
                 </div>
             </div>
